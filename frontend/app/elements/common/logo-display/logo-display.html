@@ -1,0 +1,62 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../../../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="logo-display">
+  <template>
+    
+    <style>
+      :host {
+        display: block;
+      }
+
+      @font-face {
+        font-family: 'Casper';
+        src: url('../../../fonts/Casper.ttf');
+      }
+
+      iron-image {
+        height: var(--logo-display-width, 60px); 
+        width: var(--logo-display-height, 60px); 
+      }
+
+      .display_title {
+        font-family: 'Casper';
+        font-size: var(--logo-display-font-size, 30px); 
+        margin-left: -5px;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .display_subtitle {
+        margin-left: 8px;
+      }
+    </style>
+
+    <div class="center horizontal layout">
+      <iron-image src="../../../images/etools.png" preload sizing="contain"></iron-image>
+      <span class="display_title">
+        {{ title }}
+        <span class="paper-font-subhead display_subtitle">{{ subtitle }}</span>
+      </span>
+    </div>
+
+  </template>
+  <script>
+    Polymer({
+      is: 'logo-display',
+      
+      properties: {
+        title: {
+          type: String,
+          value: 'eTools'
+        },
+
+        subtitle: {
+          type: String,
+          value: 'Partner Portal'
+        }       
+      }
+    });
+  </script>
+</dom-module>

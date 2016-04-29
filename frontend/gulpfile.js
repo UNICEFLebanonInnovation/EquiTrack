@@ -1,16 +1,6 @@
-/*
-Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-*/
-
 'use strict';
 
-// Include Gulp & tools we'll use
-var gulp = require('gulp');
+var gulp = require('gulp-help')(require('gulp'));
 var $ = require('gulp-load-plugins')();
 var del = require('del');
 var runSequence = require('run-sequence');
@@ -302,7 +292,7 @@ gulp.task('clean', function() {
 });
 
 // Watch files for changes & reload
-gulp.task('serve', ['styles', 'elements', 'images'], function() {
+gulp.task('serve', ['styles', 'fonts', 'elements', 'images'], function() {
 
   //TODO:  set the target app at this point
 
@@ -374,9 +364,9 @@ gulp.task('serve', ['styles', 'elements', 'images'], function() {
   });
 
   gulp.watch(['app/**/*.html']);
-  gulp.watch(['app/styles/**/*.css'], ['styles']);
-  gulp.watch(['app/elements/**/*.css'], ['elements']);
-  gulp.watch(['app/{scripts,elements}/**/{*.js,*.html}'], ['lint']);
+  gulp.watch(['app/styles/**/*.css', 'app/styles/**/*.html'], ['styles', reload]);
+  gulp.watch(['app/elements/**/*.css'], ['elements', reload]);
+  gulp.watch(['app/{scripts,elements}/**/{*.js,*.html}'], ['lint', reload]);
   gulp.watch(['app/images/**/*']);
 });
 

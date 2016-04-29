@@ -1,14 +1,4 @@
 <!doctype html>
-<!--
-@license
-Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-
 <html lang="">
 
 <head>
@@ -16,7 +6,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="UNICEF eTools - Partners" />
-  <title>UNICEF eTools - Partners</title>
+  <title>UNICEF eTools - Partner Portal</title>
   <!-- Place favicon.ico in the `app/` directory -->
 
   <!-- Chrome for Android theme color -->
@@ -110,7 +100,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
 
         <!-- Main Toolbar -->
-        <paper-toolbar id="mainToolbar" class="tall">
+        <paper-toolbar id="mainToolbar">
           <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
           <span class="flex"></span>
 
@@ -123,16 +113,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           
           <paper-icon-button id="refresh" icon="refresh"></paper-icon-button>
 
-          <!-- Application name -->
-          <div class="middle middle-container center horizontal layout">
-            <div style="width:300px; max-width:80%; height:100%;" class="app-name"><iron-image src="images/unicefetools.svg" style="width:100%; height:100%;" preload sizing="contain"></iron-image></div>
+          <div class="middle middle-container">
+              <logo-display></logo-display>
           </div>
-
-          <!-- Application sub title -->
-          <div class="bottom bottom-container center horizontal layout">
-            <div class="bottom-title paper-font-subhead">Welcome to eTools Partner Portal</div>
-          </div>
-
         </paper-toolbar>
 
 
@@ -158,7 +141,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     <li>Ability to report on indicators in bulk</li>
                     <li>Ability to report on fully flexible disaggregations as defined in the workplan</li>   
                 </ul>
-                <p class="paper-font-body2">Thank you for choosing to make our children's lives better! </p>
+                <p class="paper-font-subhead">Thank you for choosing to make our children's lives better! </p>
               </paper-material>
               
 
