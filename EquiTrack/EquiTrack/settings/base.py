@@ -78,8 +78,6 @@ AUTH_USER_MODEL = 'auth.User'
 AUTH_PROFILE_MODULE = 'users.UserProfile'
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 
-REGISTRATION_OPEN = True
-ACCOUNT_ACTIVATION_DAYS = 7
 
 ########## EMAIL CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
@@ -93,11 +91,11 @@ POST_OFFICE = {
 }
 EMAIL_BACKEND = 'post_office.EmailBackend'  # Will send email via our template system
 CELERY_EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND', 'django.core.mail.backends.smtp.EmailBackend')
-MAIL_HOST = os.environ.get('MAIL_HOST', '')
+EMAIL_HOST = os.environ.get('EMAIL_HOST', '')
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
+EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_PORT = 465
 ########## END EMAIL CONFIGURATION
 
 REST_FRAMEWORK = {
