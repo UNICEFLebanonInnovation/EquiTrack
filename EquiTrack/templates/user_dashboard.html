@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="body">
                                     <div class="name">
-                                        <a href="{% url 'admin:trips_trip_change' trip.id %}">{{ trip.reference }}</a>
+{#                                        <a href="{% url 'admin:trips_trip_change' trip.id %}">{{ trip.reference }}</a>#}
                                     </div>
                                     <div class="time">
                                         <i class="fa fa-clock-o"></i>
@@ -95,7 +95,7 @@
                                 </div>
                                 <div class="body">
                                     <div class="name">
-                                        <a href="{% url 'admin:trips_trip_change' trip.id %}">{{ trip.reference }}</a>
+{#                                        <a href="{% url 'admin:trips_trip_change' trip.id %}">{{ trip.reference }}</a>#}
                                     </div>
                                     <div class="time">
                                         <i class="fa fa-clock-o"></i>
@@ -124,7 +124,7 @@
                                 </div>
                                 <div class="body">
                                     <div class="name">
-                                        <a href="{% url 'admin:trips_trip_change' trip.id %}">{{ trip.reference }}</a>
+{#                                        <a href="{% url 'admin:trips_trip_change' trip.id %}">{{ trip.reference }}</a>#}
                                     </div>
                                     <div class="time">
                                         <i class="fa fa-clock-o"></i>
@@ -167,7 +167,7 @@
                     {% for ap in action_points %}
                     <div class="list-group-item">
                         <span class="">
-                            <a class="" href="{% url 'admin:trips_trip_change' ap.trip.id %}#reporting">
+{#                            <a class="" href="{% url 'admin:trips_trip_change' ap.trip.id %}#reporting">#}
                                 {{ ap.description }}
                             </a>
                             <br>
@@ -237,7 +237,7 @@
                                                             {% if l.content_type.model == 'pca' %}
                                                                 <a href="{% url 'admin:partners_pca_change' l.object_id %}" class="bolder">{{ l.content_type.name }}</a>
                                                             {% elif  l.content_type.model == 'trip' %}
-                                                                <a href="{% url 'admin:trips_trip_change' l.object_id %}" class="bolder">{{ l.content_type.name }}</a>
+{#                                                                <a href="{% url 'admin:trips_trip_change' l.object_id %}" class="bolder">{{ l.content_type.name }}</a>#}
                                                             {% else %}
                                                                  <a href="#" class="bolder">{{ l.content_type.name }}</a>
                                                             {% endif %}

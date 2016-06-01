@@ -302,6 +302,14 @@ class AgreementForm(UserGroupForm):
             'end': SuitDateWidget,
         }
 
+    # def __init__(self, *args, **kwargs):
+    #     # We can't assume that kwargs['initial'] exists!
+    #     if not kwargs['initial']:
+    #         kwargs['initial'] = {}
+    #     kwargs['initial'].update({'start': ResultStructure.current().from_date,
+    #                               'end': ResultStructure.current().to_date})
+    #     super(AgreementForm, self).__init__(*args, **kwargs)
+
     def clean(self):
         cleaned_data = super(AgreementForm, self).clean()
 

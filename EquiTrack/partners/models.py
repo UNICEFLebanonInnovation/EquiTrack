@@ -925,6 +925,13 @@ class PCA(AdminURLMixin, models.Model):
         ).count()
 
     def save(self, **kwargs):
+        if self._state.adding is True:
+            self.signed_by_partner_date = self.agreement.signed_by_partner_date
+            self.signed_by_unicef_date = self.agreement.signed_by_unicef_date
+            self.start_date = self.agreement.start
+            self.end_date = self.agreement.start
+            self.unicef_manager = self.agreement.signed_by
+            self.partner_manager = self.agreement.partner_manager
 
         super(PCA, self).save(**kwargs)
 
@@ -932,6 +939,9 @@ class PCA(AdminURLMixin, models.Model):
         if self.signed_by_unicef_date and not self.number:
             self.number = self.reference_number
             self.save()
+
+
+
 
     @classmethod
     def get_active_partnerships(cls):
