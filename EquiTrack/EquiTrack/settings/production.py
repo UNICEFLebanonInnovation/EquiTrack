@@ -208,7 +208,7 @@ JWT_AUTH = {
     'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=3000),
     #'JWT_AUDIENCE': 'https://{}/API'.format(HOST),
     # TODO: FIX THIS, NEEDS SETUP WITH ADFS
-    'JWT_AUDIENCE': 'https://etools-staging.unicef.org/API'.format(HOST),  # Hotfix to enable etrips login into prod
+    'JWT_AUDIENCE': 'https://etools-staging.unicef.org/API',  # Hotfix to enable etrips login into prod
     'JWT_ISSUER': None,
 
     'JWT_ALLOW_REFRESH': False,
